@@ -5,6 +5,8 @@
 
 A Node.js module for generating unique keys with the Arlecchino touch.
 
+![genshinarlechino](https://github.com/71Kevin/arlecchino-key-generator/assets/37316637/c1c8ad8b-67c6-411d-8bb1-4378d541d4c2)
+
 ## Installation
 
 ```
@@ -23,7 +25,7 @@ console.log(arle());
 
 ## Description
 
-The Arlecchino Key Generator is a Node.js module designed to produce unique keys with a touch of Arlecchino's charm. It utilizes cryptographic functions to generate a random UUID, shuffles its characters, inserts the phrase "Arlecchino" in the middle, and then encodes a random 7-character substring of the resulting key using Base64 encoding.
+Arlecchino Key Generator is a Node.js module designed to produce unique keys with a touch of Arlecchino's charm. It utilizes cryptographic functions to generate a random UUID, shuffles its characters, inserts the phrase "Arlecchino" in the middle, and then encodes a random 7-character substring of the resulting key using Base64 encoding.
 
 ## Why Use This Module?
 
