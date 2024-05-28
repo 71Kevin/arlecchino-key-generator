@@ -5,7 +5,7 @@
 
 A Node.js module for generating unique keys with the Arlecchino touch.
 
-![genshinarlechino](https://github.com/71Kevin/arlecchino-key-generator/assets/37316637/c1c8ad8b-67c6-411d-8bb1-4378d541d4c2)
+![RlhvODN0R1VjQUloMENDLXJlbW92ZWJnLXByZXZpZXc=](https://github.com/71Kevin/arlecchino-key-generator/assets/37316637/6f086956-87d8-4488-b664-7b56ad6d3d94)
 
 ## Installation
 
@@ -29,7 +29,11 @@ Arlecchino Key Generator is a Node.js module designed to produce unique keys wit
 
 ## Why Use This Module?
 
-Idk, I created this module in my free time from work, use it if you're a Genshin player and a simp of Arlecchino like me lmao (I got her C6 btw).
+Idk, I created this module in my free time from work, use it if you're a Genshin player and a simp of Arlecchino like me lmao.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
 
 ## License
 

@@ -1,21 +1,13 @@
-const { randomBytes } = require('crypto');
+class KeyService {
+    constructor(keyModel) {
+        this.keyModel = keyModel;
+    }
 
-class ArlecchinoKeyGenerator {
-    constructor() {
-        this.key = this.generateUniqueKey();
-        this.generateKey = this.generateKey.bind(this);
-    }
-    
-    generateUniqueKey() {
-        const randomBytesBuffer = randomBytes(16);
-        return randomBytesBuffer.toString('hex');
-    }
-    
     addStringMiddle(str, insertStr) {
         const middleIndex = Math.floor(str.length / 2);
         return str.slice(0, middleIndex) + insertStr + str.slice(middleIndex);
     }
-    
+
     shuffleString(str) {
         const array = str.split('');
         for (let i = array.length - 1; i > 0; i--) {
@@ -24,7 +16,7 @@ class ArlecchinoKeyGenerator {
         }
         return array.join('');
     }
-    
+
     randomCharsToBase64(str) {
         const randomIndices = [];
         while (randomIndices.length < 7) {
@@ -34,14 +26,26 @@ class ArlecchinoKeyGenerator {
             }
         }
         const selectedChars = randomIndices.map(index => str[index]).join('');
-        return Buffer.from(selectedChars).toString('base64');
+        let base64Str = Buffer.from(selectedChars).toString('base64');
+        
+        while (base64Str.endsWith('==')) {
+            base64Str = base64Str.slice(0, -2) + this.generateRandomChar() + this.generateRandomChar();
+        }
+
+        return base64Str;
     }
-    
+
+    generateRandomChar() {
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        return chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+
     generateKey() {
-        const stringWithMiddleString = this.addStringMiddle(this.key, "Arlecchino");
+        const uniqueKey = this.keyModel.generateUniqueKey();
+        const stringWithMiddleString = this.addStringMiddle(uniqueKey, "Arlecchino");
         const shuffledString = this.shuffleString(stringWithMiddleString);
         return this.randomCharsToBase64(shuffledString);
     }
 }
 
-module.exports = new ArlecchinoKeyGenerator().generateKey;
+module.exports = KeyService;

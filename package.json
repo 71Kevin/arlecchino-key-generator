@@ -1,24 +1,36 @@
 {
   "name": "arlecchino-key-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Node.js module for generating unique keys with the Arlecchino touch.",
   "keywords": [
     "arlecchino",
+    "arlecchino-key-generator",
+    "arlecchino-hash-generator",
+    "genshin-impact",
     "key",
+    "hash",
     "generator",
     "unique",
     "random",
     "crypto",
-    "base64"
+    "criptography",
+    "base64",
+    "npm-module"
   ],
-  "main": "ArlecchinoKeyGenerator.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "71Kevin",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/71Kevin/arlecchino-key-generator.git"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
   }
 }
