@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3] - 2024-06-06
+
+### Added
+- `createHash()`: Generates a unique key with "Arlecchino" characters.
+- `createManyHashes(count)`: Generates the specified number of unique keys.
+- `createCustomHash(customString)`: Generates a custom key with the specified string.
+- Enhanced unit tests to cover new functionalities.
+
 ## [1.0.1] - 2024-05-28
 
 ### Added

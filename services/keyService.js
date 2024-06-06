@@ -46,6 +46,37 @@ class KeyService {
         const shuffledString = this.shuffleString(stringWithMiddleString);
         return this.randomCharsToBase64(shuffledString);
     }
+
+    generateMultipleKeys(count) {
+        if (count > 100000000) {
+            throw new Error('Maximum limit of 100,000,000 keys exceeded');
+        }
+        const keys = new Set();
+        while (keys.size < count) {
+            keys.add(this.generateKey());
+        }
+        return Array.from(keys);
+    }
+
+    generateCustomKey(customString) {
+        if (customString.length > 15) {
+            throw new Error('Custom string cannot be longer than 15 characters');
+        }
+        const uniqueKey = this.keyModel.generateUniqueKey();
+        const stringWithCustom = this.addStringMiddle(uniqueKey, customString);
+        const shuffledString = this.shuffleString(stringWithCustom);
+
+        let randomIndices = [];
+        while (randomIndices.length < 30) {
+            const index = Math.floor(Math.random() * shuffledString.length);
+            if (!randomIndices.includes(index)) {
+                randomIndices.push(index);
+            }
+        }
+        const selectedChars = randomIndices.map(index => shuffledString[index]).join('');
+
+        return Buffer.from(selectedChars).toString('base64');
+    }
 }
 
 module.exports = KeyService;
