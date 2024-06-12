@@ -21,13 +21,28 @@ npm install arlecchino-key-generator
 const arle = require('arlecchino-key-generator');
 
 // Generate a single key
-console.log(arle.createHash());
+arle.createHash();
 
 // Generate multiple keys
-console.log(arle.createManyHashes(100));
+arle.createManyHashes(100);
 
 // Generate a custom key
-console.log(arle.createCustomHash('Clorinde'));
+arle.createCustomHash('Clorinde');
+```
+
+### TypeScript
+
+```typescript
+import arle from 'arlecchino-key-generator';
+
+// Generate a single key
+arle.createHash();
+
+// Generate multiple keys
+arle.createManyHashes(100);
+
+// Generate a custom key
+arle.createCustomHash('Clorinde');
 ```
 
 ## Description
@@ -36,9 +51,12 @@ Arlecchino Key Generator is a Node.js module designed to produce unique keys wit
 
 ## New Features
 
-- `createHash()` Generates a unique key with "Arlecchino" characters.
-- `createManyHashes(count)` Generates the specified number of unique keys.
-- `createCustomHash(customString)` Generates a custom key with the specified string.
+- `createHash()`: Generates a unique key with "Arlecchino" characters.
+- `createManyHashes(count)`: Generates the specified number of unique keys.
+- `createCustomHash(customString)`: Generates a custom key with the specified string.
+- `parse(hashString)`: Converts a createHash string to an array of bytes.
+- `stringify(byteArray)`: Converts an array of bytes to a createHash string.
+- `validate(hashString)`: Validates a createHash string.
 
 ## Why Use This Module?
 

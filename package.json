@@ -1,6 +1,6 @@
 {
   "name": "arlecchino-key-generator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Node.js module for generating unique keys with the Arlecchino touch.",
   "keywords": [
     "arlecchino",
@@ -12,12 +12,12 @@
     "generator",
     "unique",
     "random",
-    "crypto",
     "criptography",
     "base64",
+    "jsdoc",
     "npm-module"
   ],
-  "main": "index.js",
+  "main": "index.cjs",
   "scripts": {
     "test": "jest"
   },
@@ -26,9 +26,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/71Kevin/arlecchino-key-generator.git"
-  },
-  "dependencies": {
-    "crypto": "^1.0.1"
   },
   "devDependencies": {
     "jest": "^29.0.0"

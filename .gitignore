@@ -27,3 +27,5 @@ typings/
 dist/
 package-lock.json
 yarn.lock
+vvv
+vvv.cjs
