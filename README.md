@@ -30,21 +30,6 @@ arle.createManyHashes(100);
 arle.createCustomHash('Clorinde');
 ```
 
-### TypeScript
-
-```typescript
-import arle from 'arlecchino-key-generator';
-
-// Generate a single key
-arle.createHash();
-
-// Generate multiple keys
-arle.createManyHashes(100);
-
-// Generate a custom key
-arle.createCustomHash('Clorinde');
-```
-
 ## Description
 
 Arlecchino Key Generator is a Node.js module designed to produce unique keys with a touch of Arlecchino's charm. It utilizes cryptographic functions to generate a random UUID, shuffles its characters, inserts the phrase "Arlecchino" in the middle, and then encodes a random 7-character substring of the resulting key using Base64 encoding.
